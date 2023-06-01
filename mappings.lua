@@ -20,6 +20,19 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    --
+    ["<leader>dgt"] = {
+      function()
+        require('dap-go').debug_test()
+      end,
+      desc = "Debug Go Teste",
+    },
+    ["<leader>dgl"] = {
+      function()
+        require('dap-go').debug_last_test()
+      end,
+      desc = "Debug Go Last",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
